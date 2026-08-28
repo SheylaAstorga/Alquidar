@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --color-primary: #1F4E5F;
+    --color-primary-dark: #163A47;
+    --color-secondary: #5B7C8D;
+
+    --color-background: #F5F7F8;
+    --color-surface: #FFFFFF;
+
+    --color-text: #263238;
+    --color-text-light: #607D86;
+
+    --color-success: #3E7C59;
+    --color-warning: #C28A2C;
+    --color-danger: #B84A4A;
+
+    --color-border: #D9E1E5;
+
+    --border-radius: 8px;
+    --shadow-card: 0 4px 12px rgba(38, 50, 56, 0.10);
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+section {
+    padding: var(--spacing-large);
+    margin: 0 auto;
+}
