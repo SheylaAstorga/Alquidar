@@ -39,7 +39,3 @@ img {
     display: block;
 }
 
-section {
-    padding: var(--spacing-large);
-    margin: 0 auto;
-}
