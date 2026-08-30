@@ -39,10 +39,7 @@ img {
     display: block;
 }
 
-section {
-    padding: var(--spacing-large);
-    margin: 0 auto;
-}
+
 
 header {
     background-color: var(--color-surface);
