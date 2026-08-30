@@ -92,6 +92,52 @@ nav a:hover {
 .login a:hover {
     background-color: var(--color-primary-dark);
 }
+
+/*-- Sección Hero */
+.hero {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+
+    padding: 6rem 8%;
+
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.hero h1 {
+
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.hero_subtitulo {
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-secondary);
+
+    max-width: 55%;
+    margin: 0 auto 1.5rem auto;
+}
+
+.hero_descripcion{
+    font-size: 1rem;
+    line-height:1.5;
+    color: var(--color-text-light);
+    max-width: 75%;
+    margin: 0 auto 2rem auto;
+}
+
+
+
 /* tablets */
 @media (max-width: 768px) {
     header {
