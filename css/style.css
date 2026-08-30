@@ -136,6 +136,27 @@ nav a:hover {
     margin: 0 auto 2rem auto;
 }
 
+/*--Botón hero--*/
+.hero_btn{
+
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card);
+}
+
+.hero_btn:hover{
+    background-color: var(--color-primary-dark);
+}
 
 
 /* tablets */
