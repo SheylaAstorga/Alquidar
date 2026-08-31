@@ -152,6 +152,67 @@ nav a:hover {
     line-height: 1.6;
 }
 
+/*
+   FOOTER
+*/
+
+footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-surface);
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-proyecto,
+.footer-contacto,
+.footer-redes {
+    flex: 1;
+}
+
+.footer-proyecto h3,
+.footer-contacto h4,
+.footer-redes h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-proyecto p,
+.footer-contacto p {
+    color: #D9E1E5;
+    line-height: 1.6;
+}
+
+.footer-redes {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-redes a {
+    color: var(--color-surface);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer-redes a:hover {
+    color: var(--color-secondary);
+}
+
+.footer-copyright {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-secondary);
+    text-align: center;
+    font-size: 0.9rem;
+    color: #D9E1E5;
+}
+
 /* tablets */
 @media (max-width: 768px) {
     header {
@@ -168,6 +229,17 @@ nav a:hover {
     .propiedad {
         flex-basis: 45%;
     }
+
+    .footer-contenido {
+        flex-wrap: wrap;
+    }
+
+    .footer-proyecto,
+    .footer-contacto,
+    .footer-redes {
+        flex-basis: 45%;
+    }
+
 }
 
 /* celulares */
@@ -191,4 +263,14 @@ nav a:hover {
         width: 100%;
     }
     
+    .footer-contenido {
+        flex-direction: column;
+    }
+
+    .footer-proyecto,
+    .footer-contacto,
+    .footer-redes {
+        width: 100%;
+    }
+
 }
