@@ -213,6 +213,95 @@ footer {
     color: #D9E1E5;
 }
 
+/*-- Sección Hero */
+.hero {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+
+    padding: 6rem 8%;
+
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.hero h1 {
+
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.hero_subtitulo {
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-secondary);
+
+    max-width: 55%;
+    margin: 0 auto 1.5rem auto;
+}
+
+.hero_descripcion{
+    font-size: 1rem;
+    line-height:1.5;
+    color: var(--color-text-light);
+    max-width: 75%;
+    margin: 0 auto 2rem auto;
+}
+
+/*--Botón Hero--*/
+.hero_btn{
+
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card);
+}
+
+.hero_btn:hover{
+    background-color: var(--color-primary-dark);
+}
+
+/*--sobre-Alquidar--*/
+
+#sobre_alquidar {
+    padding: 6rem 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#sobre_alquidar h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#sobre_alquidar p {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+
+
 /* tablets */
 @media (max-width: 768px) {
     header {
@@ -238,6 +327,20 @@ footer {
     .footer-contacto,
     .footer-redes {
         flex-basis: 45%;
+    }
+
+
+    .hero {
+        min-height: 60vh;
+        padding: 4rem 6%;
+    }
+
+    .hero_subtitulo {
+        max-width: 90%;
+    }
+
+    #sobre_alquidar {
+        padding: 4rem 6%;
     }
 
 }
@@ -273,4 +376,23 @@ footer {
         width: 100%;
     }
 
+
+    .hero {
+        min-height: 50vh;
+        padding: 3rem 5%;
+    }
+
+    .hero_descripcion {
+        max-width: 90%;
+    }
+
+    .hero_btn {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #sobre_alquidar {
+        padding: 3rem 5%;
+    }
 }

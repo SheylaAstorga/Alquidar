@@ -7,9 +7,43 @@
     <meta name="description" content="Alquidar es una plataforma para gestionar propiedades en alquiler, contratos, pagos, gastos y mantenimiento.">
     <meta name="author" content="Alquidar Team">
     <link rel="stylesheet" href="css/style.css">
-    <title>Alquidar | Gestión de alquileres</title>
-</head>
+    <!-- seo basicos-->
+    <title>Alquidar | Software para Gestión de Alquileres y Propiedades</title>
+    <meta name="description" content="Gestioná tus propiedades en alquiler fácilmente. Centralizá contratos, pagos, gastos y mantenimientos en una sola plataforma. ¡Probá Alquidar!">
+    <meta name="keywords" content="gestión de alquileres, administrar propiedades, software inmobiliario, control de alquileres, contratos de alquiler">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.alquidar.com/">
 
+    <!-- open graph / whatsApp / facebook -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content="https://www.alquidar.com/"> todavia no tenemos un dominio o url -->
+    <meta property="og:title" content="Alquidar | Gestión de Alquileres Simple y Eficiente">
+    <meta property="og:description" content="Olvidate del Excel y los grupos de WhatsApp. Controlá contratos, pagos y mantenimiento en un solo lugar.">
+    <!-- se puede agregar una propiedad og:image pero todavia no tenemos imagenes del proyecto, esto seria la representacion visual del proyecto -->
+
+    <!-- twitter cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alquidar | Gestión de Alquileres Simple y Eficiente">
+    <meta name="twitter:description" content="Centralizá tus propiedades, contratos y cobros de forma fácil.">
+
+    <!-- favicon/comentado porque todavia no aplicamos un archivo imagenes -->
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css"> -->
+
+    <!-- datos estructurados: le explica directamente a los motores de busqueda que es nuestro producto o empresa
+     si fuera un producto activo aca tambien podriamos poner offer: y poner el precio y la moneda de uso en la cual se vende -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Alquidar",
+      "operatingSystem": "Web",
+      "applicationCategory": "BusinessApplication",
+      "description": "Proyecto académico para la gestión de propiedades en alquiler, control de contratos, pagos y mantenimiento."
+    }
+    </script>
+</head>
+    
 <body>
     <header>
         <div class="logo">
@@ -34,9 +68,9 @@
 
         <section id="inicio" class="hero">
             <!-- Sección principal -->
-            <h1> Bienvenidos a Alquidar</h1>
-            <p> 
-                Gestioná tus propiedades en alquiler de manera eficiente, sensilla y organizada. 
+            <h1>Plataforma para la gestión de propiedades en alquiler</h1>
+            <p class=" hero_subtitulo"> 
+                Gestioná tus propiedades en alquiler de manera eficiente, sencilla y organizada. 
             </p>
 
             <p class="hero_descripcion">
@@ -57,15 +91,12 @@
                 Administrar propiedades en alquiler es un verdadero desafío, que suele terminar en un cuaderno, una planilla en Excel y varios grupos de WhatsApp. Los vencimientos de contratos se pasan por alto, los recibos terminan en cualquier lado y se pierden, y los arreglos pendientes nadie los anota y ni hablar de los gastos que se van acumulando y nadie sabe cuánto y en que se gastó.
             </p>
             <p>
-                Alquidar es una plataforma que centraliza esa información y avisa a tiempo: que contrato se esta por vencer, qué pago se debe realizar y qué rapación aún esta pendiente. Tanto el propietario como el inquilino ven siempre el mismo estado de situación.
+                Alquidar es una plataforma que centraliza esa información y avisa a tiempo: que contrato se esta por vencer, qué pago se debe realizar y qué reparación aún esta pendiente. Tanto el propietario como el inquilino ven siempre el mismo estado de situación.
             </p>
 
         </section>
 
-        <section id="sobre-alquidar">
-            <!-- Información sobre el proyecto -->
-        </section>
-
+       
         <section id="funcionalidades">
             <!-- Funcionalidades -->
         </section>
@@ -79,7 +110,9 @@
                 
                 <article class="propiedad">
 
+
                     <img src="img/casa.jpg" alt="Casa residencial en alquiler">
+
 
                     <h3> Casa </h3>
                     <p> 
@@ -88,6 +121,7 @@
                 </article>
 
                 <article class="propiedad">
+
                     <img src="img/departamento.jpg" alt="Departamento en alquiler">
 
                     <h3>Departamento</h3>
@@ -98,7 +132,9 @@
 
                 <article class="propiedad"> 
 
+
                     <img src="img/local.jpg" alt="Local Comercial en alquiler">
+
 
                     <h3> Local Comercial </h3>
                     <p>
@@ -121,7 +157,9 @@
             <div class="footer-proyecto">
                 <h3> Alquidar </h3>
                 <p> 
+
                     Es una plataforma diseñada para facilitar la gestión y organización de propiedades en alquiler.
+
                 </p>
             </div>
 
