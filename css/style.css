@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --color-primary: #1F4E5F;
+    --color-primary-dark: #163A47;
+    --color-secondary: #5B7C8D;
+
+    --color-background: #F5F7F8;
+    --color-surface: #FFFFFF;
+
+    --color-text: #263238;
+    --color-text-light: #607D86;
+
+    --color-success: #3E7C59;
+    --color-warning: #C28A2C;
+    --color-danger: #B84A4A;
+
+    --color-border: #D9E1E5;
+
+    --border-radius: 8px;
+    --shadow-card: 0 4px 12px rgba(38, 50, 56, 0.10);
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+header {
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-light);
+    padding: 0.5rem 0;
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+.login a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-surface);
+    background-color: var(--color-primary);
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--border-radius);
+}
+
+.login a:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/*
+   SECCIÓN PROPIEDADES
+*/
+
+#propiedades {
+    padding: 4rem 2rem;
+}
+
+#propiedades h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#propiedades > p {
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+}
+
+.contenedor-propiedades {
+    display: flex;
+    gap: 2rem;
+}
+
+
+.propiedad {
+    flex: 1;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.propiedad:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(38, 50, 56, 0.15);
+}
+
+.propiedad img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.propiedad h3 {
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.propiedad p {
+    color: var(--color-text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/*
+   FOOTER
+*/
+
+footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-surface);
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-proyecto,
+.footer-contacto,
+.footer-redes {
+    flex: 1;
+}
+
+.footer-proyecto h3,
+.footer-contacto h4,
+.footer-redes h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-proyecto p,
+.footer-contacto p {
+    color: #D9E1E5;
+    line-height: 1.6;
+}
+
+.footer-redes {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-redes a {
+    color: var(--color-surface);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer-redes a:hover {
+    color: var(--color-secondary);
+}
+
+.footer-copyright {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-secondary);
+    text-align: center;
+    font-size: 0.9rem;
+    color: #D9E1E5;
+}
+
+/*-- Sección Hero */
+.hero {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+
+    padding: 6rem 8%;
+
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.hero h1 {
+
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.hero_subtitulo {
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-secondary);
+
+    max-width: 55%;
+    margin: 0 auto 1.5rem auto;
+}
+
+.hero_descripcion{
+    font-size: 1rem;
+    line-height:1.5;
+    color: var(--color-text-light);
+    max-width: 75%;
+    margin: 0 auto 2rem auto;
+}
+
+/*--Botón Hero--*/
+.hero_btn{
+
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card);
+}
+
+.hero_btn:hover{
+    background-color: var(--color-primary-dark);
+}
+
+/*--sobre-Alquidar--*/
+
+#sobre_alquidar {
+    padding: 6rem 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#sobre_alquidar h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#sobre_alquidar p {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+
+
+/* tablets */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+    nav ul {
+        gap:1rem;
+    }
+
+    .contenedor-propiedades {
+        flex-wrap: wrap;
+    }
+
+    .propiedad {
+        flex-basis: 45%;
+    }
+
+    .footer-contenido {
+        flex-wrap: wrap;
+    }
+
+    .footer-proyecto,
+    .footer-contacto,
+    .footer-redes {
+        flex-basis: 45%;
+    }
+
+
+    .hero {
+        min-height: 60vh;
+        padding: 4rem 6%;
+    }
+
+    .hero_subtitulo {
+        max-width: 90%;
+    }
+
+    #sobre_alquidar {
+        padding: 4rem 6%;
+    }
+
+}
+
+/* celulares */
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .contenedor-propiedades {
+        flex-direction: column;
+    }
+
+    .propiedad {
+        width: 100%;
+    }
+    
+    .footer-contenido {
+        flex-direction: column;
+    }
+
+    .footer-proyecto,
+    .footer-contacto,
+    .footer-redes {
+        width: 100%;
+    }
+
+
+    .hero {
+        min-height: 50vh;
+        padding: 3rem 5%;
+    }
+
+    .hero_descripcion {
+        max-width: 90%;
+    }
+
+    .hero_btn {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #sobre_alquidar {
+        padding: 3rem 5%;
+    }
+}
