@@ -136,7 +136,7 @@ nav a:hover {
     margin: 0 auto 2rem auto;
 }
 
-/*--Botón hero--*/
+/*--Botón Hero--*/
 .hero_btn{
 
     display: inline-block;
@@ -158,6 +158,28 @@ nav a:hover {
     background-color: var(--color-primary-dark);
 }
 
+/*--sobre-Alquidar--*/
+
+#sobre_alquidar {
+    padding: 6rem 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#sobre_alquidar h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#sobre_alquidar p {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
 
 /* tablets */
 @media (max-width: 768px) {
@@ -166,6 +188,19 @@ nav a:hover {
     }
     nav ul {
         gap:1rem;
+    }
+
+    .hero {
+        min-height: 60vh;
+        padding: 4rem 6%;
+    }
+
+    .hero_subtitulo {
+        max-width: 90%;
+    }
+
+    #sobre_alquidar {
+        padding: 4rem 6%;
     }
 }
 
@@ -180,5 +215,24 @@ nav a:hover {
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
+    }
+
+    .hero {
+        min-height: 50vh;
+        padding: 3rem 5%;
+    }
+
+    .hero_descripcion {
+        max-width: 90%;
+    }
+
+    .hero_btn {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #sobre_alquidar {
+        padding: 3rem 5%;
     }
 }
