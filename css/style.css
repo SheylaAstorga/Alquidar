@@ -41,6 +41,22 @@
     --bs-btn-active-border-color: var(--color-primary);
 }
 
+.accordion-button:not(.collapsed) {
+    background-color: var(--color-accent);
+    color: var(--color-navy);
+}
+
+/* Prueba Color del Footer */
+.footer-nav a {
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--color-primary);
+}
+
 /* CSS del TP2 comentado para referencia
 * {
     margin: 0;
