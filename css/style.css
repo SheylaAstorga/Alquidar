@@ -88,6 +88,11 @@
     flex-shrink: 0;
 }
 
+.card-destacada .check-icono {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
 .btn-outline-alquidar-light {
     --bs-btn-color: var(--color-primary);
     --bs-btn-border-color: var(--color-primary);
@@ -97,6 +102,28 @@
     --bs-btn-active-color: var(--color-background);
     --bs-btn-active-bg: var(--color-navy);
     --bs-btn-active-border-color: var(--color-navy);
+}
+
+.precio-anterior {
+    text-decoration: line-through;
+    color: var(--color-dark);
+    opacity: 0.5;
+    font-size: 1.1rem;
+}
+
+.precio-caja-oscura .precio-anterior {
+    color: var(--color-accent);
+    opacity: 0.8;
+}
+
+.badge-descuento {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 50px;
 }
 
 /* CSS del TP2 comentado para referencia
