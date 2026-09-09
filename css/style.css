@@ -5,6 +5,42 @@
     --color-dark: #1B2A41;
     --color-accent: #D6B89F;
 }
+
+/* Variantes Bootstrap personalizadas con la identidad visual de Alquidar */
+.btn-alquidar {
+    --bs-btn-color: var(--color-background);
+    --bs-btn-bg: var(--color-primary);
+    --bs-btn-border-color: var(--color-primary);
+    --bs-btn-hover-color: var(--color-background);
+    --bs-btn-hover-bg: var(--color-dark);
+    --bs-btn-hover-border-color: var(--color-accent);
+    --bs-btn-active-color: var(--color-background);
+    --bs-btn-active-bg: var(--color-dark);
+    --bs-btn-active-border-color: var(--color-dark);
+}
+
+.btn-outline-alquidar {
+    --bs-btn-color: var(--color-background);
+    --bs-btn-border-color: var(--color-primary);
+    --bs-btn-hover-color: var(--color-background);
+    --bs-btn-hover-bg: var(--color-primary);
+    --bs-btn-hover-border-color: var(--color-primary);
+    --bs-btn-active-color: var(--color-background);
+    --bs-btn-active-bg: var(--color-navy);
+    --bs-btn-active-border-color: var(--color-navy);
+}
+
+.btn-outline-accent {
+    --bs-btn-color: var(--color-background);
+    --bs-btn-border-color: var(--color-accent);
+    --bs-btn-hover-color: var(--color-navy);
+    --bs-btn-hover-bg: var(--color-accent);
+    --bs-btn-hover-border-color: var(--color-accent);
+    --bs-btn-active-color: var(--color-background);
+    --bs-btn-active-bg: var(--color-primary);
+    --bs-btn-active-border-color: var(--color-primary);
+}
+
 /* CSS del TP2 comentado para referencia
 * {
     margin: 0;
