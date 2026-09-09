@@ -1,408 +1,534 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Alquidar es una plataforma para gestionar propiedades en alquiler, contratos, pagos, gastos y mantenimiento.">
-    <meta name="author" content="Alquidar Team">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Alquidar es una plataforma para gestionar propiedades en alquiler, contratos, pagos, gastos y mantenimiento."
+    />
+    <meta name="author" content="Alquidar Team" />
     <!-- linkeo bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="css/style.css">
-    
+    <!-- linkeo bootstrap icons -->
+    <link 
+      rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
     <!-- seo basicos-->
     <title>Alquidar | Software para Gestión de Alquileres y Propiedades</title>
-    <meta name="description" content="Gestioná tus propiedades en alquiler fácilmente. Centralizá contratos, pagos, gastos y mantenimientos en una sola plataforma. ¡Probá Alquidar!">
-    <meta name="keywords" content="gestión de alquileres, administrar propiedades, software inmobiliario, control de alquileres, contratos de alquiler">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.alquidar.com/">
+    <meta
+      name="description"
+      content="Gestioná tus propiedades en alquiler fácilmente. Centralizá contratos, pagos, gastos y mantenimientos en una sola plataforma. ¡Probá Alquidar!"
+    />
+    <meta
+      name="keywords"
+      content="gestión de alquileres, administrar propiedades, software inmobiliario, control de alquileres, contratos de alquiler"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.alquidar.com/" />
 
     <!-- open graph / whatsApp / facebook -->
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="website" />
     <!-- <meta property="og:url" content="https://www.alquidar.com/"> todavia no tenemos un dominio o url -->
-    <meta property="og:title" content="Alquidar | Gestión de Alquileres Simple y Eficiente">
-    <meta property="og:description" content="Olvidate del Excel y los grupos de WhatsApp. Controlá contratos, pagos y mantenimiento en un solo lugar.">
+    <meta
+      property="og:title"
+      content="Alquidar | Gestión de Alquileres Simple y Eficiente"
+    />
+    <meta
+      property="og:description"
+      content="Olvidate del Excel y los grupos de WhatsApp. Controlá contratos, pagos y mantenimiento en un solo lugar."
+    />
     <!-- se puede agregar una propiedad og:image pero todavia no tenemos imagenes del proyecto, esto seria la representacion visual del proyecto -->
 
     <!-- twitter cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Alquidar | Gestión de Alquileres Simple y Eficiente">
-    <meta name="twitter:description" content="Centralizá tus propiedades, contratos y cobros de forma fácil.">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Alquidar | Gestión de Alquileres Simple y Eficiente"
+    />
+    <meta
+      name="twitter:description"
+      content="Centralizá tus propiedades, contratos y cobros de forma fácil."
+    />
 
     <!-- favicon -->
-    <link rel="icon" href="img/logo.jpg" type="image/jpeg">
-    
+    <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
 
-    
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Alquidar",
-      "operatingSystem": "Web",
-      "applicationCategory": "BusinessApplication",
-      "description": "Proyecto académico para la gestión de propiedades en alquiler, control de contratos, pagos y mantenimiento."
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Alquidar",
+        "operatingSystem": "Web",
+        "applicationCategory": "BusinessApplication",
+        "description": "Proyecto académico para la gestión de propiedades en alquiler, control de contratos, pagos y mantenimiento."
+      }
     </script>
-</head>
-    
-<body>
+  </head>
+
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm"
-            style="background-color: var(--color-navy);">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm"
+        style="background-color: var(--color-navy)"
+      >
+        <div class="container py-2">
+          <a
+            class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-3"
+            href="#inicio"
+          >
+            <img
+              src="img/logo.jpg"
+              alt="Logo de Alquidar"
+              width="42"
+              height="42"
+              class="rounded-circle"
+            />
 
-            <div class="container py-2">
+            <span>Alquidar</span>
+          </a>
 
-                <a class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-3"
-                    href="#inicio">
+          <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir menú de navegación"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-                    <img src="img/logo.jpg"
-                        alt="Logo de Alquidar"
-                        width="42"
-                        height="42"
-                        class="rounded-circle">
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-2 text-center">
+              <li class="nav-item">
+                <a class="nav-link px-lg-2" href="#inicio"> Inicio </a>
+              </li>
 
-                    <span>Alquidar</span>
+              <li class="nav-item">
+                <a class="nav-link px-lg-2" href="#sobre_alquidar">
+                  Nosotros
                 </a>
+              </li>
 
-                <button class="navbar-toggler border-0 shadow-none"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal"
-                    aria-expanded="false"
-                    aria-label="Abrir menú de navegación">
+              <li class="nav-item">
+                <a class="nav-link px-lg-2" href="#precios"> Precios </a>
+              </li>
 
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+              <li class="nav-item">
+                <a class="nav-link px-lg-2" href="#contacto"> Contacto </a>
+              </li>
+            </ul>
 
-                <div class="collapse navbar-collapse" id="menuPrincipal">
+            <div
+              class="d-flex flex-column flex-lg-row gap-2 justify-content-center"
+            >
+              <a
+                href="#login"
+                class="btn btn-outline-alquidar rounded-pill px-3 fw-semibold"
+              >
+                Iniciar sesión
+              </a>
 
-                    <ul class="navbar-nav mx-auto mb-3 mb-lg-0
-                        gap-lg-2 text-center">
-
-                        <li class="nav-item">
-                            <a class="nav-link px-lg-2" href="#inicio">
-                                Inicio
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link px-lg-2" href="#sobre_alquidar">
-                                Nosotros
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link px-lg-2" href="#precios">
-                                Precios
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link px-lg-2" href="#contacto">
-                                Contacto
-                            </a>
-                        </li>
-                    </ul>
-
-                    <div class="d-flex flex-column flex-lg-row gap-2
-                        justify-content-center">
-
-                        <a href="#login"
-                            class="btn btn-outline-alquidar rounded-pill px-3 fw-semibold">
-
-                            Iniciar sesión
-                        </a>
-
-                        <a href="#registro"
-                            class="btn btn-alquidar rounded-pill px-3 fw-semibold">
-
-                            Registrarse
-                        </a>
-                    </div>
-                </div>
+              <a
+                href="#registro"
+                class="btn btn-alquidar rounded-pill px-3 fw-semibold"
+              >
+                Registrarse
+              </a>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
+      <section
+        id="inicio"
+        class="py-5 py-lg-0 overflow-hidden"
+        style="background-color: var(--color-navy)"
+      >
+        <div class="container px-4 px-md-3">
+          <div class="row align-items-center g-4 g-lg-4 py-lg-5">
+            <!-- Columna izquierda: texto -->
+            <div class="col-12 col-lg-6 text-center text-lg-start">
+              <p
+                class="text-uppercase fw-semibold small mb-3"
+                style="color: var(--color-accent)"
+              >
+                Gestión de alquileres
+              </p>
 
-        <section id="inicio" class="py-5 py-lg-0 overflow-hidden"
-            style="background-color: var(--color-navy);">
+              <h1
+                class="display-4 fw-bold mb-4"
+                style="color: var(--color-background)"
+              >
+                Gestioná tus alquileres de manera simple y organizada.
+              </h1>
 
-            <div class="container px-4 px-md-3">
+              <p class="lead mb-4" style="color: var(--color-background)">
+                Centralizá propiedades, contratos, pagos y vencimientos en un
+                solo lugar.
+              </p>
 
-                <div class="row align-items-center g-4 g-lg-4 py-lg-5">
+              <div class="d-grid d-sm-flex gap-3 justify-content-lg-start">
+                <a
+                  href="#registro"
+                  class="btn btn-alquidar btn-lg px-4 fw-semibold rounded-pill shadow-sm"
+                >
+                  Comenzar ahora
+                </a>
 
-                    <!-- Columna izquierda: texto -->
-                    <div class="col-12 col-lg-6 text-center text-lg-start">
+                <a
+                  href="#sobre_alquidar"
+                  class="btn btn-outline-accent btn-lg px-4 fw-semibold rounded-pill"
+                >
+                  Conocé Alquidar
+                </a>
+              </div>
+            </div>
 
-                        <p class="text-uppercase fw-semibold small mb-3"
-                            style="color: var(--color-accent);">
-                            Gestión de alquileres
-                        </p>
+            <!-- Columna derecha: mockup -->
+            <div class="col-12 col-lg-6">
+              <div
+                class="card border-0 shadow-lg rounded-4 p-3 p-md-4 mx-auto"
+                style="
+                  background-color: var(--color-background);
+                  max-width: 500px;
+                "
+              >
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <div>
+                    <p class="text-secondary mb-1">Resumen mensual</p>
 
-                        <h1 class="display-4 fw-bold mb-4"
-                            style="color: var(--color-background);">
-                            Gestioná tus alquileres de manera simple y organizada.
-                        </h1>
+                    <h2
+                      class="h4 fw-bold mb-0"
+                      style="color: var(--color-navy)"
+                    >
+                      Tu panel de control
+                    </h2>
+                  </div>
 
-                        <p class="lead mb-4"
-                            style="color: var(--color-background);">
-                            Centralizá propiedades, contratos, pagos y vencimientos
-                            en un solo lugar.
-                        </p>
-
-                        <div class="d-grid d-sm-flex gap-3
-                            justify-content-lg-start">
-
-                            <a href="#registro"
-                                class="btn btn-alquidar btn-lg px-4 fw-semibold rounded-pill shadow-sm">
-
-                                Comenzar ahora
-                            </a>
-
-                            <a href="#sobre_alquidar"
-                                class="btn btn-outline-accent btn-lg px-4 fw-semibold rounded-pill">
-
-                                Conocé Alquidar
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Columna derecha: mockup -->
-                    <div class="col-12 col-lg-6">
-
-                        <div class="card border-0 shadow-lg rounded-4
-                            p-3 p-md-4 mx-auto"
-                            style="background-color: var(--color-background);
-                            max-width: 500px;">
-
-                            <div class="d-flex justify-content-between
-                                align-items-center mb-3">
-
-                                <div>
-                                    <p class="text-secondary mb-1">
-                                        Resumen mensual
-                                    </p>
-
-                                    <h2 class="h4 fw-bold mb-0"
-                                        style="color: var(--color-navy);">
-                                        Tu panel de control
-                                    </h2>
-                                </div>
-
-                                <span class="badge rounded-pill px-3 py-2"
-                                    style="background-color: var(--color-primary);">
-                                    Septiembre
-                                </span>
-                            </div>
-
-                            <div class="row g-3 mx-0">
-
-                                <div class="col-6">
-                                    <div class="p-3 rounded-3 h-100"
-                                        style="background-color: var(--color-accent);">
-
-                                        <small>Propiedades</small>
-
-                                        <p class="fs-3 fw-bold mb-0"
-                                            style="color: var(--color-navy);">
-                                            12
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-6">
-                                    <div class="p-3 rounded-3 h-100 bg-light">
-
-                                        <small>Cobros al día</small>
-
-                                        <p class="fs-3 fw-bold mb-0"
-                                            style="color: var(--color-navy);">
-                                            92%
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="border rounded-3 p-3 mt-3">
-
-                                <div class="d-flex justify-content-between mb-2">
-                                    <strong>Pagos recibidos</strong>
-
-                                    <span style="color: var(--color-primary);">
-                                        $1.245.000
-                                    </span>
-                                </div>
-
-                                <div class="progress" style="height: 8px;">
-
-                                    <div class="progress-bar"
-                                        role="progressbar"
-                                        style="width: 76%;
-                                        background-color: var(--color-primary);"
-                                        aria-label="76 por ciento de pagos recibidos">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mt-3 p-3 rounded-3"
-                                style="background-color: #f1e4dc;">
-
-                                🔔 Tenés 3 vencimientos próximos.
-                            </div>
-                        </div>
-                    </div>
+                  <span
+                    class="badge rounded-pill px-3 py-2"
+                    style="background-color: var(--color-primary)"
+                  >
+                    Septiembre
+                  </span>
                 </div>
+
+                <div class="row g-3 mx-0">
+                  <div class="col-6">
+                    <div
+                      class="p-3 rounded-3 h-100"
+                      style="background-color: var(--color-accent)"
+                    >
+                      <small>Propiedades</small>
+
+                      <p
+                        class="fs-3 fw-bold mb-0"
+                        style="color: var(--color-navy)"
+                      >
+                        12
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 h-100 bg-light">
+                      <small>Cobros al día</small>
+
+                      <p
+                        class="fs-3 fw-bold mb-0"
+                        style="color: var(--color-navy)"
+                      >
+                        92%
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="border rounded-3 p-3 mt-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <strong>Pagos recibidos</strong>
+
+                    <span style="color: var(--color-primary)">
+                      $1.245.000
+                    </span>
+                  </div>
+
+                  <div class="progress" style="height: 8px">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 76%; background-color: var(--color-primary)"
+                      aria-label="76 por ciento de pagos recibidos"
+                    ></div>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-3 p-3 rounded-3"
+                  style="background-color: #f1e4dc"
+                >
+                  🔔 Tenés 3 vencimientos próximos.
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="sobre_alquidar">
-            <h2>El problema que resolvemos</h2>
-            <p>
-                Administrar propiedades en alquiler es un verdadero desafío, que suele terminar en un cuaderno, una planilla en Excel y varios grupos de WhatsApp. Los vencimientos de contratos se pasan por alto, los recibos terminan en cualquier lado y se pierden, y los arreglos pendientes nadie los anota y ni hablar de los gastos que se van acumulando y nadie sabe cuánto y en que se gastó.
+      <!-- Sección: ¿Qué ofrecemos? -->
+      <section
+        id="servicios"
+        class="py-5"
+        style="background-color: var(--color-background)"
+      >
+        <div class="container">
+          <div class="row text-center mb-5 pb-3">
+            <h2 class="fw-bold display-3 mb-3" style="color: var(--color-navy)">
+              ¿Qué servicios ofrecemos?
+            </h2>
+            <p  class="display-6" style="color: var(--color-dark)">
+              Conocé los servicios principales de Alquidar diseñados para simplificar tu gestión y llevá la administración de tus propiedades al siguiente nivel.
             </p>
-            <p>
-                Alquidar es una plataforma que centraliza esa información y avisa a tiempo: que contrato se esta por vencer, qué pago se debe realizar y qué reparación aún esta pendiente. Tanto el propietario como el inquilino ven siempre el mismo estado de situación.
-            </p>
+          </div>
 
-        </section>
-
-        <section id="funcionalidades">
-            <h2>Funcionalidades</h2>
-            <p>
-                Todo lo que necesitás para administrar tus alquileres, en un solo lugar.
-            </p>
-
-            <div class="grid-funcionalidades">
-
-                <article class="funcionalidad">
-                    <div class="funcionalidad-icono">📄</div>
-                    <h3>Contratos</h3>
-                    <p>Cargá y controlá tus contratos de alquiler, con recordatorios automáticos de vencimiento.</p>
-                </article>
-
-                <article class="funcionalidad">
-                    <div class="funcionalidad-icono">💳</div>
-                    <h3>Pagos</h3>
-                    <p>Registrá los pagos recibidos y llevá un historial claro de cada inquilino.</p>
-                </article>
-
-                <article class="funcionalidad">
-                    <div class="funcionalidad-icono">📊</div>
-                    <h3>Gastos</h3>
-                    <p>Controlá los gastos de cada propiedad y sabé exactamente en qué se invirtió.</p>
-                </article>
-
-                <article class="funcionalidad">
-                    <div class="funcionalidad-icono">🛠️</div>
-                    <h3>Mantenimiento</h3>
-                    <p>Gestioná pedidos de reparación y hacé seguimiento hasta que se resuelvan.</p>
-                </article>
-
-                <article class="funcionalidad">
-                    <div class="funcionalidad-icono">🔔</div>
-                    <h3>Alertas</h3>
-                    <p>Recibí notificaciones antes de que un contrato o pago venza.</p>
-                </article>
-
-                <article class="funcionalidad">
-                    <div class="funcionalidad-icono">📈</div>
-                    <h3>Reportes</h3>
-                    <p>Generá reportes para tomar decisiones informadas sobre tus propiedades.</p>
-                </article>
-
+          <div class="row g-4">
+            <!-- Card 1: Propiedades -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 module-card">
+                <div class="card-body text-center p-4">
+                  <div class="icon-box mb-3">
+                    
+                    <i
+                      class="bi bi-house-door-fill fs-1"
+                      style="color: var(--color-primary)"
+                    ></i>
+                  </div>
+                  <h4
+                    class="card-title fw-bold"
+                    style="color: var(--color-navy)"
+                  >
+                    Propiedades
+                  </h4>
+                  <p class="card-text text-muted">
+                    Organización y consulta de las propiedades administradas.
+                  </p>
+                </div>
+              </div>
             </div>
-        </section>
-        
-        <section id="propiedades">
-            <h2>Propiedades</h2>
-            <p>
-                Administrá y organizá la información de tus propiedades en un solo lugar.
-            </p>
-            <div class="contenedor-propiedades">
-                
-                <article class="propiedad">
 
-
-                    <img src="img/casa.jpg" alt="Casa residencial en alquiler">
-
-
-                    <h3> Casa </h3>
-                    <p> 
-                        Gestioná la información, los contratos, sus pagos y el mantenimiento de tus propiedades.
-                    </p>
-                </article>
-
-                <article class="propiedad">
-
-                    <img src="img/departamento.jpg" alt="Departamento en alquiler">
-
-                    <h3>Departamento</h3>
-                    <p> 
-                        Manten organizados los contratos, los gastos y los pagos de cada una de tus propiedades.
-                    </p>
-                </article>
-
-                <article class="propiedad"> 
-
-
-                    <img src="img/local.jpg" alt="Local Comercial en alquiler">
-
-
-                    <h3> Local Comercial </h3>
-                    <p>
-                        Administrá de manera eficiente los contratos, vencimientos, gastos y mantenimiento de tus locales.
-                    </p>
-                </article>
+            <!-- Card 2: Contratos -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 module-card">
+                <div class="card-body text-center p-4">
+                  <div class="icon-box mb-3">
+                    <i
+                      class="bi bi-file-earmark-text-fill fs-1"
+                      style="color: var(--color-primary)"
+                    ></i>
+                  </div>
+                  <h4
+                    class="card-title fw-bold"
+                    style="color: var(--color-navy)"
+                  >
+                    Contratos
+                  </h4>
+                  <p class="card-text text-muted">
+                    Seguimiento de contratos y sus períodos de vigencia.
+                  </p>
+                </div>
+              </div>
             </div>
-                         
-        </section>
 
-        <section id="analisis">
-            <!-- Análisis y alertas -->
-        </section>
+            <!-- Card 3: Pagos -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 module-card">
+                <div class="card-body text-center p-4">
+                  <div class="icon-box mb-3">
+                    <i
+                      class="bi bi-cash-stack fs-1"
+                      style="color: var(--color-primary)"
+                    ></i>
+                  </div>
+                  <h4
+                    class="card-title fw-bold"
+                    style="color: var(--color-navy)"
+                  >
+                    Pagos
+                  </h4>
+                  <p class="card-text text-muted">
+                    Registro y seguimiento de los pagos correspondientes a cada
+                    alquiler.
+                  </p>
+                </div>
+              </div>
+            </div>
 
+            <!-- Card 4: Vencimientos -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 module-card">
+                <div class="card-body text-center p-4">
+                  <div class="icon-box mb-3">
+                    <i
+                      class="bi bi-calendar-x-fill fs-1"
+                      style="color: var(--color-primary)"
+                    ></i>
+                  </div>
+                  <h4
+                    class="card-title fw-bold"
+                    style="color: var(--color-navy)"
+                  >
+                    Vencimientos
+                  </h4>
+                  <p class="card-text text-muted">
+                    Visualización de próximos vencimientos y situaciones
+                    pendientes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: Inquilinos -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 module-card">
+                <div class="card-body text-center p-4">
+                  <div class="icon-box mb-3">
+                    <i
+                      class="bi bi-people-fill fs-1"
+                      style="color: var(--color-primary)"
+                    ></i>
+                  </div>
+                  <h4
+                    class="card-title fw-bold"
+                    style="color: var(--color-navy)"
+                  >
+                    Inquilinos
+                  </h4>
+                  <p class="card-text text-muted">
+                    Organización de la información de los inquilinos.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6: Resumen -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 module-card">
+                <div class="card-body text-center p-4">
+                  <div class="icon-box mb-3">
+                    <i
+                      class="bi bi-pie-chart-fill fs-1"
+                      style="color: var(--color-primary)"
+                    ></i>
+                  </div>
+                  <h4
+                    class="card-title fw-bold"
+                    style="color: var(--color-navy)"
+                  >
+                    Resumen
+                  </h4>
+                  <p class="card-text text-muted">
+                    Visualización general de la situación de los alquileres.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="propiedades">
+        <h2>Propiedades</h2>
+        <p>
+          Administrá y organizá la información de tus propiedades en un solo
+          lugar.
+        </p>
+        <div class="contenedor-propiedades">
+          <article class="propiedad">
+            <img src="img/casa.jpg" alt="Casa residencial en alquiler" />
+
+            <h3>Casa</h3>
+            <p>
+              Gestioná la información, los contratos, sus pagos y el
+              mantenimiento de tus propiedades.
+            </p>
+          </article>
+
+          <article class="propiedad">
+            <img src="img/departamento.jpg" alt="Departamento en alquiler" />
+
+            <h3>Departamento</h3>
+            <p>
+              Manten organizados los contratos, los gastos y los pagos de cada
+              una de tus propiedades.
+            </p>
+          </article>
+
+          <article class="propiedad">
+            <img src="img/local.jpg" alt="Local Comercial en alquiler" />
+
+            <h3>Local Comercial</h3>
+            <p>
+              Administrá de manera eficiente los contratos, vencimientos, gastos
+              y mantenimiento de tus locales.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="analisis">
+        <!-- Análisis y alertas -->
+      </section>
     </main>
 
     <footer>
-        <div class="footer-contenido">
-
-            <div class="footer-proyecto">
-                <h3> Alquidar </h3>
-                <p> 
-
-                    Es una plataforma diseñada para facilitar la gestión y organización de propiedades en alquiler.
-
-                </p>
-            </div>
-
-            <div class="footer-contacto">
-                <h4>Contacto</h4>
-                <p>
-                    Email: Progra-Team@TheBest.com.tuc 
-                </p>
-            </div>
-
-            <div class="footer-redes">
-                <h4>Seguinos en nuestras redes sociales</h4>
-
-                <a href=""> Instagram </a>
-                <a href=""> Facebook </a>
-            </div>
+      <div class="footer-contenido">
+        <div class="footer-proyecto">
+          <h3>Alquidar</h3>
+          <p>
+            Es una plataforma diseñada para facilitar la gestión y organización
+            de propiedades en alquiler.
+          </p>
         </div>
 
-        <div class="footer-copyright">
-
-            <p>
-                &copy; 2026 Alquidar. Todos los derechos reservados.
-            </p>
+        <div class="footer-contacto">
+          <h4>Contacto</h4>
+          <p>Email: Progra-Team@TheBest.com.tuc</p>
         </div>
+
+        <div class="footer-redes">
+          <h4>Seguinos en nuestras redes sociales</h4>
+
+          <a href=""> Instagram </a>
+          <a href=""> Facebook </a>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p>&copy; 2026 Alquidar. Todos los derechos reservados.</p>
+      </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
