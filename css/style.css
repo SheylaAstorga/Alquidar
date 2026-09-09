@@ -41,6 +41,91 @@
     --bs-btn-active-border-color: var(--color-primary);
 }
 
+/* ===== Sección Precios (Facu) ===== */
+
+.card-precio {
+    box-shadow: 0 8px 24px rgba(15, 45, 74, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-precio:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(15, 45, 74, 0.15);
+}
+
+.card-destacada {
+    box-shadow: 0 16px 40px rgba(15, 45, 74, 0.3);
+}
+
+@media (min-width: 992px) {
+    .card-destacada {
+        transform: scale(1.05);
+    }
+    .card-destacada:hover {
+        transform: scale(1.05) translateY(-6px);
+    }
+}
+
+.precio-caja {
+    background-color: var(--color-accent);
+    background-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+}
+
+.precio-caja-oscura {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.check-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    color: var(--color-navy);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+}
+
+.card-destacada .check-icono {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+.btn-outline-alquidar-light {
+    --bs-btn-color: var(--color-primary);
+    --bs-btn-border-color: var(--color-primary);
+    --bs-btn-hover-color: var(--color-background);
+    --bs-btn-hover-bg: var(--color-primary);
+    --bs-btn-hover-border-color: var(--color-primary);
+    --bs-btn-active-color: var(--color-background);
+    --bs-btn-active-bg: var(--color-navy);
+    --bs-btn-active-border-color: var(--color-navy);
+}
+
+.precio-anterior {
+    text-decoration: line-through;
+    color: var(--color-dark);
+    opacity: 0.5;
+    font-size: 1.1rem;
+}
+
+.precio-caja-oscura .precio-anterior {
+    color: var(--color-accent);
+    opacity: 0.8;
+}
+
+.badge-descuento {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 50px;
+}
+
 /* CSS del TP2 comentado para referencia
 * {
     margin: 0;
