@@ -41,14 +41,182 @@
     --bs-btn-active-border-color: var(--color-primary);
 }
 
-.accordion-button:not(.collapsed) {
-    background-color: var(--color-accent);
+/* PROPIEDADES */
+
+#propiedades {
+    background-color: var(--color-background);
+}
+
+#propiedades h2 {
     color: var(--color-navy);
 }
 
-/* Prueba Color del Footer */
-.footer-nav a {
+#propiedades > .container > p {
     color: var(--color-dark);
+}
+
+.propiedad {
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+    padding: 1rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.propiedad:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(27, 42, 65, 0.12);
+}
+
+
+.propiedad img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+
+.propiedad h3 {
+    color: var(--color-navy);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+
+.propiedad p {
+    color: var(--color-dark);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+
+/* FAQ - ACORDEÓN */
+
+#faq {
+    background-color: var(--color-background);
+}
+
+#faq h2 {
+    color: var(--color-navy);
+}
+
+#faq > .container > p {
+    color: var(--color-dark);
+}
+
+
+/* Contenedor del acordeón */
+
+#accordionFAQ {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#accordionFAQ .accordion-item {
+    border: 1px solid var(--color-accent);
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+#accordionFAQ .accordion-button {
+    color: var(--color-navy);
+    font-weight: 600;
+    background-color: var(--color-background);
+}
+
+
+#accordionFAQ .accordion-button:not(.collapsed) {
+    background-color: var(--color-accent);
+    color: var(--color-navy);
+    box-shadow: none;
+}
+
+
+#accordionFAQ .accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(201, 111, 74, 0.15);
+}
+
+#accordionFAQ .accordion-body {
+    color: var(--color-dark);
+    background-color: #FFFFFF;
+    line-height: 1.6;
+}
+
+
+/* CONTACTO */
+
+#contacto {
+    background-color: var(--color-background);
+}
+
+#contacto h2 {
+    color: var(--color-navy);
+}
+
+#contacto .text-center p {
+    color: var(--color-dark);
+}
+
+
+#contacto .form-label {
+    color: var(--color-navy);
+    font-weight: 600;
+}
+
+
+#contacto .form-control {
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: var(--color-dark);
+}
+
+
+#contacto .form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(201, 111, 74, 0.15);
+}
+
+
+#contacto .form-control::placeholder {
+    color: #8A817A;
+}
+
+#contacto .btn-alquidar {
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+}
+
+
+/* FOOTER */
+
+.footer-alquidar {
+    background-color: var(--color-navy);
+    color: var(--color-background);
+}
+
+.footer-alquidar h3,
+.footer-alquidar h4 {
+    color: var(--color-primary);
+}
+
+.footer-alquidar p {
+    color: var(--color-background);
+}
+
+
+/* Enlaces del footer */
+
+.footer-nav a {
+    color: var(--color-background);
     text-decoration: none;
     transition: color 0.3s ease;
 }
