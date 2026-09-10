@@ -1,3 +1,329 @@
+:root {
+    --color-primary: #C96F4A;
+    --color-navy: #0F2D4A;
+    --color-background: #F8F5F1;
+    --color-dark: #1B2A41;
+    --color-accent: #D6B89F;
+}
+
+/* Variantes Bootstrap personalizadas con la identidad visual de Alquidar */
+.btn-alquidar {
+    --bs-btn-color: var(--color-background);
+    --bs-btn-bg: var(--color-primary);
+    --bs-btn-border-color: var(--color-primary);
+    --bs-btn-hover-color: var(--color-background);
+    --bs-btn-hover-bg: var(--color-dark);
+    --bs-btn-hover-border-color: var(--color-accent);
+    --bs-btn-active-color: var(--color-background);
+    --bs-btn-active-bg: var(--color-dark);
+    --bs-btn-active-border-color: var(--color-dark);
+}
+
+.btn-outline-alquidar {
+    --bs-btn-color: var(--color-background);
+    --bs-btn-border-color: var(--color-primary);
+    --bs-btn-hover-color: var(--color-background);
+    --bs-btn-hover-bg: var(--color-primary);
+    --bs-btn-hover-border-color: var(--color-primary);
+    --bs-btn-active-color: var(--color-background);
+    --bs-btn-active-bg: var(--color-navy);
+    --bs-btn-active-border-color: var(--color-navy);
+}
+
+.btn-outline-accent {
+    --bs-btn-color: var(--color-background);
+    --bs-btn-border-color: var(--color-accent);
+    --bs-btn-hover-color: var(--color-navy);
+    --bs-btn-hover-bg: var(--color-accent);
+    --bs-btn-hover-border-color: var(--color-accent);
+    --bs-btn-active-color: var(--color-background);
+    --bs-btn-active-bg: var(--color-primary);
+    --bs-btn-active-border-color: var(--color-primary);
+}
+
+/* ===== Sección Precios (Facu) ===== */
+
+.card-precio {
+    box-shadow: 0 8px 24px rgba(15, 45, 74, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-precio:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(15, 45, 74, 0.15);
+}
+
+.card-destacada {
+    box-shadow: 0 16px 40px rgba(15, 45, 74, 0.3);
+}
+
+/* @media (min-width: 992px) {
+    .card-destacada {
+        transform: scale(1.05);
+    }
+    .card-destacada:hover {
+        transform: scale(1.05) translateY(-6px);
+    }
+} */
+
+.precio-caja {
+    background-color: var(--color-accent);
+    background-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+}
+
+.precio-caja-oscura {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.check-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    color: var(--color-navy);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+}
+
+.card-destacada .check-icono {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+.btn-outline-alquidar-light {
+    --bs-btn-color: var(--color-primary);
+    --bs-btn-border-color: var(--color-primary);
+    --bs-btn-hover-color: var(--color-background);
+    --bs-btn-hover-bg: var(--color-primary);
+    --bs-btn-hover-border-color: var(--color-primary);
+    --bs-btn-active-color: var(--color-background);
+    --bs-btn-active-bg: var(--color-navy);
+    --bs-btn-active-border-color: var(--color-navy);
+}
+
+.precio-anterior {
+    text-decoration: line-through;
+    color: var(--color-dark);
+    opacity: 0.5;
+    font-size: 1.1rem;
+}
+
+.precio-caja-oscura .precio-anterior {
+    color: var(--color-accent);
+    opacity: 0.8;
+}
+
+.badge-descuento {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 50px;
+}
+
+/* PROPIEDADES */
+
+#propiedades {
+    background-color: var(--color-background);
+}
+
+#propiedades h2 {
+    color: var(--color-navy);
+}
+
+#propiedades > .container > p {
+    color: var(--color-dark);
+}
+
+.propiedad {
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+    padding: 1rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.propiedad:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(27, 42, 65, 0.12);
+}
+
+
+.propiedad img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+
+.propiedad h3 {
+    color: var(--color-navy);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+
+.propiedad p {
+    color: var(--color-dark);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+
+/* FAQ - ACORDEÓN */
+
+#faq {
+    background-color: var(--color-background);
+}
+
+#faq h2 {
+    color: var(--color-navy);
+}
+
+#faq > .container > p {
+    color: var(--color-dark);
+}
+
+
+/* Contenedor del acordeón */
+
+#accordionFAQ {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#accordionFAQ .accordion-item {
+    border: 1px solid var(--color-accent);
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+#accordionFAQ .accordion-button {
+    color: var(--color-navy);
+    font-weight: 600;
+    background-color: var(--color-background);
+}
+
+
+#accordionFAQ .accordion-button:not(.collapsed) {
+    background-color: var(--color-accent);
+    color: var(--color-navy);
+    box-shadow: none;
+}
+
+
+#accordionFAQ .accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(201, 111, 74, 0.15);
+}
+
+#accordionFAQ .accordion-body {
+    color: var(--color-dark);
+    background-color: #FFFFFF;
+    line-height: 1.6;
+}
+
+
+/* CONTACTO */
+
+#contacto {
+    background-color: var(--color-background);
+}
+
+#contacto h2 {
+    color: var(--color-navy);
+}
+
+#contacto .text-center p {
+    color: var(--color-dark);
+}
+
+
+#contacto .form-label {
+    color: var(--color-navy);
+    font-weight: 600;
+}
+
+
+#contacto .form-control {
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: var(--color-dark);
+}
+
+
+#contacto .form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(201, 111, 74, 0.15);
+}
+
+
+#contacto .form-control::placeholder {
+    color: #8A817A;
+}
+
+#contacto .btn-alquidar {
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+}
+
+
+/* FOOTER */
+
+.footer-alquidar {
+    background-color: var(--color-navy);
+    color: var(--color-background);
+}
+
+.footer-alquidar h3,
+.footer-alquidar h4 {
+    color: var(--color-primary);
+}
+
+.footer-alquidar p {
+    color: var(--color-background);
+}
+
+
+/* Enlaces del footer */
+
+.footer-nav a {
+    color: var(--color-background);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--color-primary);
+}
+
+.module-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border-bottom: 4px solid transparent !important;
+}
+
+.module-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(15, 45, 74, 0.12) !important;
+    border-bottom: 4px solid var(--color-primary) !important;
+    
+    background-color: var(--color-background) !important; 
+}
+
+/* CSS del TP2 comentado para referencia
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +332,14 @@
 
 :root {
 
-    --color-primary: #1F4E5F;
-    --color-primary-dark: #163A47;
-    --color-secondary: #5B7C8D;
+    --color-primary: #c2410c;
+    --color-primary-dark: #431407;
+    --color-secondary: #FFEDD5;
 
-    --color-background: #F5F7F8;
+    --color-background: #0f2d4a;
     --color-surface: #FFFFFF;
 
-    --color-text: #263238;
+    --color-text: #292524;
     --color-text-light: #607D86;
 
     --color-success: #3E7C59;
@@ -42,7 +368,7 @@ img {
 
 
 header {
-    background-color: var(--color-surface);
+    background-color: var(--color-background);
     border-bottom: 1px solid var(--color-border);
     padding: 1rem 2rem;
     position: sticky;
@@ -93,9 +419,6 @@ nav a:hover {
     background-color: var(--color-primary-dark);
 }
 
-/*
-   SECCIÓN PROPIEDADES
-*/
 
 #propiedades {
     padding: 4rem 2rem;
@@ -152,9 +475,7 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/*
-   FOOTER
-*/
+
 
 footer {
     background-color: var(--color-primary-dark);
@@ -213,7 +534,7 @@ footer {
     color: #D9E1E5;
 }
 
-/*-- Sección Hero */
+
 .hero {
     min-height: 70vh;
 
@@ -256,7 +577,7 @@ footer {
     margin: 0 auto 2rem auto;
 }
 
-/*--Botón Hero--*/
+
 .hero_btn{
 
     display: inline-block;
@@ -278,7 +599,7 @@ footer {
     background-color: var(--color-primary-dark);
 }
 
-/*--sobre-Alquidar--*/
+
 
 #sobre_alquidar {
     padding: 6rem 8%;
@@ -302,7 +623,7 @@ footer {
 
 
 
-/* tablets */
+
 @media (max-width: 768px) {
     header {
         padding: 1rem;
@@ -345,7 +666,7 @@ footer {
 
 }
 
-/* celulares */
+
 
 @media (max-width: 480px) {
     header {
@@ -395,4 +716,17 @@ footer {
     #sobre_alquidar {
         padding: 3rem 5%;
     }
+}
+*/
+.module-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border-bottom: 4px solid transparent !important;
+}
+
+.module-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(15, 45, 74, 0.12) !important;
+    border-bottom: 4px solid var(--color-primary) !important;
+    
+    background-color: var(--color-background) !important; 
 }
