@@ -57,16 +57,16 @@
     box-shadow: 0 16px 40px rgba(15, 45, 74, 0.3);
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
     .card-destacada {
         transform: scale(1.05);
     }
     .card-destacada:hover {
         transform: scale(1.05) translateY(-6px);
     }
-}
+} */
 
-.precio-caja {
+/* .precio-caja {
     background-color: var(--color-accent);
     background-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
 }
@@ -91,7 +91,7 @@
 .card-destacada .check-icono {
     background-color: var(--color-primary);
     color: var(--color-background);
-}
+} */
 
 .btn-outline-alquidar-light {
     --bs-btn-color: var(--color-primary);
@@ -103,7 +103,7 @@
     --bs-btn-active-bg: var(--color-navy);
     --bs-btn-active-border-color: var(--color-navy);
 }
-
+/*
 .precio-anterior {
     text-decoration: line-through;
     color: var(--color-dark);
@@ -308,6 +308,19 @@
 
 .footer-nav a:hover {
     color: var(--color-primary);
+}
+
+.module-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border-bottom: 4px solid transparent !important;
+}
+
+.module-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(15, 45, 74, 0.12) !important;
+    border-bottom: 4px solid var(--color-primary) !important;
+    
+    background-color: var(--color-background) !important; 
 }
 
 /* CSS del TP2 comentado para referencia
