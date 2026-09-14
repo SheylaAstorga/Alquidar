@@ -947,20 +947,19 @@
 
                             <div class="col-md-6">
                                 <label for="contacto-nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="contacto-nombre" placeholder="Ingresá tu nombre">
+                                <input type="text" class="form-control" id="contacto-nombre" placeholder="Ingresá tu nombre" minlength="2" maxlength="50">
                                 <div id="error-nombre" class="text-danger mt-1"></div>
                             </div>
 
                             <div class="col-md-6">
                                 <label for="contacto-email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="contacto-email" placeholder="Ingresá tu email">
+                                <input type="email" class="form-control" id="contacto-email" placeholder="Ingresá tu email" maxlength="60">
                                 <div id="error-email" class="text-danger mt-1"></div>
                             </div>
 
                             <div class="col-12">
                                 <label for="contacto-mensaje" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="contacto-mensaje" rows="6"
-                                    placeholder="Escribí tu mensaje"></textarea>
+                                <textarea class="form-control" id="contacto-mensaje" rows="6" placeholder="Escribí tu mensaje" minlength="10" maxlength="500"></textarea>
                                     <div id="error-mensaje" class="text-danger mt-1"></div>
                             </div>
 

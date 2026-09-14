@@ -4,7 +4,7 @@ formulario.addEventListener("submit", function(event) {
     event.preventDefault(); 
 
     const nombre = document.querySelector("#contacto-nombre").value.trim();
-    const email = document.querySelector("#contacto-email").value.trim();
+    const email = document.querySelector("#contacto-email").value.trim().toLowerCase();
     const mensaje = document.querySelector("#contacto-mensaje").value.trim();
 
     document.querySelector("#error-nombre").textContent = "";
@@ -36,6 +36,18 @@ formulario.addEventListener("submit", function(event) {
     
     if (mensaje === "") {
         document.querySelector("#error-mensaje").textContent = "❌ Completá con un mensaje, por favor..";
+        document.querySelector("#contacto-mensaje").classList.add("is-invalid");
+        return;
+    }
+
+    if (nombre.length < 2) {
+        document.querySelector("#error-nombre").textContent = "❌ El nombre debe tener al menos 2 caracteres.";
+        document.querySelector("#contacto-nombre").classList.add("is-invalid");
+        return;
+    }
+
+    if (mensaje.length < 10) {
+        document.querySelector("#error-mensaje").textContent = "❌ El mensaje debe tener al menos 10 caracteres.";
         document.querySelector("#contacto-mensaje").classList.add("is-invalid");
         return;
     }
