@@ -41,6 +41,39 @@
     --bs-btn-active-border-color: var(--color-primary);
 }
 
+/* ========================================
+   CARDS INTERACTIVAS - CÓMO FUNCIONA
+======================================== */
+
+.paso-interactivo {
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.paso-inner {
+    position: relative;
+    min-height: 150px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.paso-interactivo.activo .paso-inner {
+    transform: rotateY(180deg);
+}
+
+.paso-front,
+.paso-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.paso-back {
+    transform: rotateY(180deg);
+}
+
+
 /* ===== Sección Precios (Facu) ===== */
 
 .card-precio {
