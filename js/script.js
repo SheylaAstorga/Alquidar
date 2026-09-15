@@ -16,7 +16,7 @@ const enlacesNavbar = document.querySelectorAll("#menuPrincipal .nav-link");
 
 const secciones = [...enlacesNavbar]
     .map(function (enlace) {
-        return document.querySelector(enlace.getAttribute("heref"));
+        return document.querySelector(enlace.getAttribute("href"));
     })
     .filter(function (seccion) {
         return seccion !== null;
