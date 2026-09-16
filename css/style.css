@@ -73,6 +73,37 @@
     transform: rotateY(180deg);
 }
 
+/* styles para el navbar activo y scroll */
+
+.navbar {
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#menuPrincipal .nav-link {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+#menuPrincipal .nav-link.active {
+  color: var(--color-background);
+  font-weight: 700;
+}
+
+#menuPrincipal .nav-link.active::after {
+  content: "";
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0;
+  left: 0.5rem;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+.navbar.navbar-con-scroll {
+  background-color: rgba(15, 45, 74, 0.86) !important;
+  box-shadow: 0 0.5rem 1.25rem rgba(15, 45, 74, 0.3) !important;
+}
 
 /* ===== Sección Precios (Facu) ===== */
 
@@ -355,6 +386,7 @@
     
     background-color: var(--color-background) !important; 
 }
+
 
 /* CSS del TP2 comentado para referencia
 * {
@@ -751,15 +783,3 @@ footer {
     }
 }
 */
-.module-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    border-bottom: 4px solid transparent !important;
-}
-
-.module-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(15, 45, 74, 0.12) !important;
-    border-bottom: 4px solid var(--color-primary) !important;
-    
-    background-color: var(--color-background) !important; 
-}
