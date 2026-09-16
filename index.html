@@ -642,6 +642,16 @@
 							Elegí el plan que mejor se adapte a tus necesidades y empezá a gestionar
 							tus propiedades de forma simple y organizada.
 						</p>
+						<div class="d-flex justify-content-center align-items-center gap-3 mb-5">
+							<span id="labelMensual" class="fw-bold opacity-100">Mensual</span>
+
+							<div class="form-check form-switch">
+								<input class="form-check-input" type="checkbox" id="togglePrecios" style="width: 3em; height: 1.5em; cursor: pointer;">
+							</div>
+
+							<span id="labelAnual" class="fw-semibold opacity-50">Anual</span>
+
+						</div>
 					</div>
 
 					<div class="row g-4 justify-content-center align-items-stretch">
@@ -666,15 +676,19 @@
 
 									<div class="precio-caja rounded-3 p-3 mb-4">
 										<p class="mb-1 small text-secondary">Hasta 2 alquileres</p>
-										<div class="d-flex align-items-center gap-2 mb-1">
-											<span class="precio-anterior">$22.375</span>
+
+										<div class="d-flex align-items-center gap-2 mb-1 d-none promo-anual">
+											<span class="precio-anterior">$0</span>
 											<span class="badge-descuento">-20%</span>
 										</div>
-										<h3 class="fw-bold mb-0" style="color: var(--color-navy);">
-											$17.900<span class="fs-6 text-secondary">/mes</span>
+
+										<h3 class="fw-bold mb-0" id="precioBasico" data-mensual="15000" data-anual="180000"
+											style="color: var(--color-navy);">
+											$15.000<span class="fs-6 text-secondary" id="periodoBasico">/mes</span>
 										</h3>
-										<p class="mb-0" style="font-size: 0.7rem; color: var(--color-dark); opacity: 0.6;">
-											Beneficio exclusivo por tiempo limitado
+
+										<p class="mb-0 nota-mensual" style="font-size: 0.7rem; color: var(--color-dark); opacity: 0.6;">
+											Pagando anual, ahorrás un 20%
 										</p>
 									</div>
 
@@ -719,17 +733,20 @@
 									</p>
 
 									<div class="precio-caja precio-caja-oscura rounded-3 p-3 mb-4">
-										<p class="mb-1 small" style="color: var(--color-accent);">Hasta 15 alquileres
-										</p>
-										<div class="d-flex align-items-center gap-2 mb-1">
-											<span class="precio-anterior">$37.375</span>
+										<p class="mb-1 small" style="color: var(--color-accent);">Hasta 15 alquileres</p>
+
+										<div class="d-flex align-items-center gap-2 mb-1 d-none promo-anual">
+											<span class="precio-anterior">$0</span>
 											<span class="badge-descuento">-20%</span>
 										</div>
-										<h3 class="fw-bold mb-0" style="color: var(--color-background);">
-											$29.900<span class="fs-6" style="color: var(--color-accent);">/mes</span>
+
+										<h3 class="fw-bold mb-0" id="precioProfesional" data-mensual="25000" data-anual="300000"
+											style="color: var(--color-background);">
+											$25.000<span class="fs-6" id="periodoProfesional" style="color: var(--color-accent);">/mes</span>
 										</h3>
-										<p class="mb-0" style="font-size: 0.7rem; color: var(--color-accent); opacity: 0.6;">
-											Beneficio exclusivo por tiempo limitado
+
+										<p class="mb-0 nota-mensual" style="font-size: 0.7rem; color: var(--color-accent); opacity: 0.6;">
+											Pagando anual, ahorrás un 20%
 										</p>
 									</div>
 
@@ -774,15 +791,19 @@
 
 									<div class="precio-caja rounded-3 p-3 mb-4">
 										<p class="mb-1 small text-secondary">Alquileres ilimitados</p>
-										<div class="d-flex align-items-center gap-2 mb-1">
-											<span class="precio-anterior">$59.875</span>
+
+										<div class="d-flex align-items-center gap-2 mb-1 d-none promo-anual">
+											<span class="precio-anterior">$0</span>
 											<span class="badge-descuento">-20%</span>
 										</div>
-										<h3 class="fw-bold mb-0" style="color: var(--color-navy);">
-											$47.900<span class="fs-6 text-secondary">/mes</span>
+
+										<h3 class="fw-bold mb-0" id="precioPremium" data-mensual="45000" data-anual="540000"
+											style="color: var(--color-navy);">
+											$45.000<span class="fs-6 text-secondary" id="periodoPremium">/mes</span>
 										</h3>
-										<p class="mb-0" style="font-size: 0.7rem; color: var(--color-dark); opacity: 0.6;">
-											Beneficio exclusivo por tiempo limitado
+
+										<p class="mb-0 nota-mensual" style="font-size: 0.7rem; color: var(--color-dark); opacity: 0.6;">
+											Pagando anual, ahorrás un 20%
 										</p>
 									</div>
 
