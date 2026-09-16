@@ -431,9 +431,21 @@
 						</p>
 					</div>
 
-					<div class="row g-4">
+                    <!-- Filtro de servicios-->
+                    <div id="filtrosServicios" class="d-flex flex-wrap justify-content-center gap-2 mb-5" role="group" aria-label="Filtar servicios por categoría">
+                        <button  type="button" class="btn btn-alquidar rounded-pill px-3 fw-bold" data-filtro="todos" aria-pressed="true">Todos</button>
+                        <button  type="button" class="btn btn-outline-alquidar-light rounded-pill px-3 fw-bold" data-filtro="propiedades" aria-pressed="false">Propiedades</button>
+                        <button type="button" class="btn btn-outline-alquidar-light rounded-pill px-3 fw-bold" data-filtro="contratos" aria-pressed="false">Contratos</button>
+                        <button type="button" class="btn btn-outline-alquidar-light rounded-pill px-3 fw-bold" data-filtro="pagos" aria-pressed="false">Pagos</button>
+                        <button type="button" class="btn btn-outline-alquidar-light rounded-pill px-3 fw-bold" data-filtro="vencimientos" aria-pressed="false">Vencimientos</button>
+                        <button type="button" class="btn btn-outline-alquidar-light rounded-pill px-3 fw-bold" data-filtro="inquilinos" aria-pressed="false">Inquilinos</button>
+                        <button type="button" class="btn btn-outline-alquidar-light rounded-pill px-3 fw-bold" data-filtro="resumen" aria-pressed="false">Resumen</button>
+
+                    </div>
+
+					<div class="row g-4 justify-content-center" id="gridServicios">
 						<!-- Card 1: Propiedades -->
-						<div class="col-12 col-md-6 col-lg-4">
+						<div class="col-12 col-md-6 col-lg-4 servicio" data-categoria="propiedades">
 							<div class="card h-100 shadow-sm border-0 module-card">
 								<div class="card-body text-center p-4">
 									<div class="icon-box mb-3">
@@ -452,7 +464,7 @@
 
 
 						<!-- Card 2: Contratos -->
-						<div class="col-12 col-md-6 col-lg-4">
+						<div class="col-12 col-md-6 col-lg-4 servicio" data-categoria="contratos">
 							<div class="card h-100 shadow-sm border-0 module-card">
 								<div class="card-body text-center p-4">
 									<div class="icon-box mb-3">
@@ -469,7 +481,7 @@
 						</div>
 
 						<!-- Card 3: Pagos -->
-						<div class="col-12 col-md-6 col-lg-4">
+						<div class="col-12 col-md-6 col-lg-4 servicio" data-categoria="pagos">
 							<div class="card h-100 shadow-sm border-0 module-card">
 								<div class="card-body text-center p-4">
 									<div class="icon-box mb-3">
@@ -487,7 +499,7 @@
 						</div>
 
 						<!-- Card 4: Vencimientos -->
-						<div class="col-12 col-md-6 col-lg-4">
+						<div class="col-12 col-md-6 col-lg-4 servicio" data-categoria="vencimientos">
 							<div class="card h-100 shadow-sm border-0 module-card">
 								<div class="card-body text-center p-4">
 									<div class="icon-box mb-3">
@@ -505,7 +517,7 @@
 						</div>
 
 						<!-- Card 5: Inquilinos -->
-						<div class="col-12 col-md-6 col-lg-4">
+						<div class="col-12 col-md-6 col-lg-4 servicio" data-categoria="inquilinos">
 							<div class="card h-100 shadow-sm border-0 module-card">
 								<div class="card-body text-center p-4">
 									<div class="icon-box mb-3">
@@ -522,7 +534,7 @@
 						</div>
 
 						<!-- Card 6: Resumen -->
-						<div class="col-12 col-md-6 col-lg-4">
+						<div class="col-12 col-md-6 col-lg-4 servicio" data-categoria="resumen">
 							<div class="card h-100 shadow-sm border-0 module-card">
 								<div class="card-body text-center p-4">
 									<div class="icon-box mb-3">

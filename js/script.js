@@ -57,6 +57,43 @@ if (navbar && secciones.length > 0) {
     actualizarNavbar();
 }
 
+
+const filtrosServicios = document.getElementById("filtrosServicios");
+const gridServicios = document.getElementById("gridServicios");
+
+if (filtrosServicios && gridServicios){
+
+    const botonesFiltro = filtrosServicios.querySelectorAll("button");
+    const tarjetasServicios = gridServicios.querySelectorAll(".servicio");
+
+    botonesFiltro.forEach(function(boton) {
+
+        boton.addEventListener("click", function(){
+
+            const filtro = boton.dataset.filtro;
+
+            botonesFiltro.forEach (function (otroBoton){
+                otroBoton.classList.remove("btn-alquidar");
+                otroBoton.classList.add("btn-outline-alquidar-light");
+                otroBoton.setAttribute("aria-pressed", "false");
+            });
+
+            boton.classList.remove ("btn-outline-alquidar-light");
+            boton.classList.add("btn-alquidar");
+            boton.setAttribute("aria-pressed", "true");
+
+            tarjetasServicios.forEach(function(tarjeta) {
+
+                const coincide = filtro === "todos" || tarjeta.dataset.categoria === filtro;
+
+                tarjeta.classList.toggle("d-none", !coincide);
+            });
+        });
+    });
+
+
+}
+
 const togglePrecios = document.querySelector("#togglePrecios");
 const labelMensual = document.querySelector("#labelMensual");
 const labelAnual = document.querySelector("#labelAnual");
@@ -111,6 +148,9 @@ togglePrecios.addEventListener("change", function () {
         labelAnual.classList.replace("fw-bold", "fw-semibold");
     }
 });
+
+
+
 
 const formulario = document.querySelector("#formulario-contacto");
 
@@ -173,4 +213,11 @@ formulario.addEventListener("submit", function(event) {
     }
 
     document.querySelector("#mensaje-exito").textContent = "Listo. ¡Mensaje enviado correctamente! Muchas gracias.";
+    document.querySelector("#formulario-contacto").reset();
+
+    setTimeout(function() {
+    
+    document.querySelector("#mensaje-exito").textContent = "";
+}, 4000);
 });
+
