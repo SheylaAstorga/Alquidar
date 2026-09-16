@@ -57,15 +57,12 @@ if (navbar && secciones.length > 0) {
     actualizarNavbar();
 }
 
-// Variables: referencias a los elementos del DOM que vamos a usar
 const togglePrecios = document.querySelector("#togglePrecios");
 const labelMensual = document.querySelector("#labelMensual");
 const labelAnual = document.querySelector("#labelAnual");
 
-// Todas las cards de precio tienen un h3 con data-mensual y data-anual
 const preciosCards = document.querySelectorAll(".card-precio h3[data-mensual]");
 
-// Formateador para mostrar $17.900 en vez de $17900
 const formatoPesos = new Intl.NumberFormat("es-AR");
 
 togglePrecios.addEventListener("change", function () {
@@ -82,7 +79,7 @@ togglePrecios.addEventListener("change", function () {
 
         const valorMensual = Number(precioEl.dataset.mensual);
         const valorAnual = Number(precioEl.dataset.anual);
-        const valorSinDescuento = valorMensual * 12; // precio anual "de lista", sin el 20%
+        const valorSinDescuento = valorMensual * 12; 
 
         if (esAnual) {
             precioEl.firstChild.textContent = "$" + formatoPesos.format(valorAnual);
