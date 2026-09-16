@@ -56,3 +56,39 @@ if (navbar && secciones.length > 0) {
 
     actualizarNavbar();
 }
+
+const filtrosServicios = document.getElementById("filtrosServicios");
+const gridServicios = document.getElementById("gridServicios");
+
+if (filtrosServicios && gridServicios){
+
+    const botonesFiltro = filtrosServicios.querySelectorAll("button");
+    const tarjetasServicios = gridServicios.querySelectorAll(".servicio");
+
+    botonesFiltro.forEach(function(boton) {
+
+        boton.addEventListener("click", function(){
+
+            const filtro = boton.dataset.filtro;
+
+            botonesFiltro.forEach (function (otroBoton){
+                otroBoton.classList.remove("btn-alquidar");
+                otroBoton.classList.add("btn-outline-alquidar-light");
+                otroBoton.setAttribute("aria-pressed", "false");
+            });
+
+            boton.classList.remove ("btn-outline-alquidar-light");
+            boton.classList.add("btn-alquidar");
+            boton.setAttribute("aria-pressed", "true");
+
+            tarjetasServicios.forEach(function(tarjeta) {
+
+                const coincide = filtro === "todos" || tarjeta.dataset.categoria === filtro;
+
+                tarjeta.classList.toggle("d-none", !coincide);
+            });
+        });
+    });
+
+
+}
