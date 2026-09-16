@@ -57,6 +57,7 @@ if (navbar && secciones.length > 0) {
     actualizarNavbar();
 }
 
+
 const filtrosServicios = document.getElementById("filtrosServicios");
 const gridServicios = document.getElementById("gridServicios");
 
@@ -92,3 +93,60 @@ if (filtrosServicios && gridServicios){
 
 
 }
+
+const togglePrecios = document.querySelector("#togglePrecios");
+const labelMensual = document.querySelector("#labelMensual");
+const labelAnual = document.querySelector("#labelAnual");
+
+const preciosCards = document.querySelectorAll(".card-precio h3[data-mensual]");
+
+const formatoPesos = new Intl.NumberFormat("es-AR");
+
+togglePrecios.addEventListener("change", function () {
+
+    const esAnual = togglePrecios.checked;
+
+    preciosCards.forEach(function (precioEl) {
+
+        const contenedor = precioEl.closest(".precio-caja");
+        const periodoEl = precioEl.querySelector("span");
+        const promoBox = contenedor.querySelector(".promo-anual");
+        const precioAnteriorEl = promoBox.querySelector(".precio-anterior");
+        const notaMensual = contenedor.querySelector(".nota-mensual");
+
+        const valorMensual = Number(precioEl.dataset.mensual);
+        const valorAnual = Number(precioEl.dataset.anual);
+        const valorSinDescuento = valorMensual * 12; 
+
+        if (esAnual) {
+            precioEl.firstChild.textContent = "$" + formatoPesos.format(valorAnual);
+            periodoEl.textContent = "/año";
+
+            precioAnteriorEl.textContent = "$" + formatoPesos.format(valorSinDescuento);
+            promoBox.classList.remove("d-none");
+            notaMensual.classList.add("d-none");
+        } else {
+            precioEl.firstChild.textContent = "$" + formatoPesos.format(valorMensual);
+            periodoEl.textContent = "/mes";
+
+            promoBox.classList.add("d-none");
+            notaMensual.classList.remove("d-none");
+        }
+    });
+
+    if (esAnual) {
+        labelAnual.classList.replace("opacity-50", "opacity-100");
+        labelAnual.classList.replace("fw-semibold", "fw-bold");
+
+        labelMensual.classList.replace("opacity-100", "opacity-50");
+        labelMensual.classList.replace("fw-bold", "fw-semibold");
+    } else {
+        labelMensual.classList.replace("opacity-50", "opacity-100");
+        labelMensual.classList.replace("fw-semibold", "fw-bold");
+
+        labelAnual.classList.replace("opacity-100", "opacity-50");
+        labelAnual.classList.replace("fw-bold", "fw-semibold");
+    }
+});
+
+
