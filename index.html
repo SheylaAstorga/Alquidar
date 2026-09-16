@@ -1002,43 +1002,48 @@
 		</div>
 	</section>
 
-	<section id="contacto" class="py-5">
-		<div class="container" style="max-width: 800px;">
+            <section id="contacto" class="py-5">
+                <div class="container" style="max-width: 800px;">
 
-			<div class="text-center mb-5">
-				<h2>Contacto</h2>
-				<p>¿Tenés alguna consulta? Escribinos y te ayudaremos.</p>
-			</div>
+                    <div class="text-center mb-5">
+                        <h2>Contacto</h2>
+                        <p>¿Tenés alguna consulta? Escribinos y te ayudaremos.</p>
+                    </div>
 
-			<form>
-				<div class="row g-3">
+                    <form id="formulario-contacto" novalidate> <!-- Quitar novalidate en caso de querer que el mismo navegador valide los campos del email -->
+                        <div class="row g-3">
 
-					<div class="col-md-6">
-						<label for="nombre" class="form-label">Nombre</label>
-						<input type="text" class="form-control" id="nombre" placeholder="Ingresá tu nombre">
-					</div>
+                            <div class="col-md-6">
+                                <label for="contacto-nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="contacto-nombre" placeholder="Ingresá tu nombre" minlength="2" maxlength="50">
+                                <div id="error-nombre" class="text-danger mt-1"></div>
+                            </div>
 
-					<div class="col-md-6">
-						<label for="email" class="form-label">Email</label>
-						<input type="email" class="form-control" id="email" placeholder="Ingresá tu email">
-					</div>
+                            <div class="col-md-6">
+                                <label for="contacto-email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="contacto-email" placeholder="Ingresá tu email" maxlength="60">
+                                <div id="error-email" class="text-danger mt-1"></div>
+                            </div>
 
-					<div class="col-12">
-						<label for="mensaje" class="form-label">Mensaje</label>
-						<textarea class="form-control" id="mensaje" rows="6" placeholder="Escribí tu mensaje"></textarea>
-					</div>
+                            <div class="col-12">
+                                <label for="contacto-mensaje" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="contacto-mensaje" rows="6" placeholder="Escribí tu mensaje" minlength="10" maxlength="500"></textarea>
+                                    <div id="error-mensaje" class="text-danger mt-1"></div>
+                            </div>
 
-					<div class="col-12 text-center">
-						<button type="submit" class="btn btn-alquidar px-4">
-							Enviar consulta
-						</button>
-					</div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-alquidar px-4">
+                                    Enviar consulta
+                                </button>
+                                <div id="mensaje-exito" class="text-success mt-3 text-center"></div>
+                            </div>
 
-				</div>
-			</form>
+                        </div>
+                    </form>
 
-		</div>
-	</section>
+                </div>
+            </section>
+
 
 	</main>
 
