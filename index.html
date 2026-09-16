@@ -627,7 +627,6 @@
 
 			</section>
 
-
 			<section id="precios" class="py-5">
 				<div class="container px-4 px-md-3 py-lg-4">
 
@@ -642,13 +641,22 @@
 							Elegí el plan que mejor se adapte a tus necesidades y empezá a gestionar
 							tus propiedades de forma simple y organizada.
 						</p>
+						<div class="d-flex justify-content-center align-items-center gap-3 mb-5">
+							<span id="labelMensual" class="fw-bold opacity-100">Mensual</span>
+
+							<div class="form-check form-switch">
+								<input class="form-check-input" type="checkbox" id="togglePrecios" style="width: 3em; height: 1.5em; cursor: pointer;">
+							</div>
+
+							<span id="labelAnual" class="fw-semibold opacity-50">Anual</span>
+						</div>
 					</div>
 
 					<div class="row g-4 justify-content-center align-items-stretch">
 
 						<!-- PLAN BÁSICO -->
 						<div class="col-12 col-md-6 col-lg-4">
-							<div class="card card-precio h-100 border-0 rounded-4 p-4"
+							<div class="card card-precio h-100 border-0 rounded-4 p-4 shadow-sm"
 								style="background-color: var(--color-background);">
 								<div class="card-body d-flex flex-column p-0">
 
@@ -666,26 +674,39 @@
 
 									<div class="precio-caja rounded-3 p-3 mb-4">
 										<p class="mb-1 small text-secondary">Hasta 2 alquileres</p>
-										<div class="d-flex align-items-center gap-2 mb-1">
-											<span class="precio-anterior">$22.375</span>
-											<span class="badge-descuento">-20%</span>
+
+										<div class="d-flex align-items-center gap-2 mb-1 d-none promo-anual">
+											<span class="precio-anterior text-decoration-line-through opacity-50" style="color: var(--color-dark);">$0</span>
+											<span class="badge rounded-pill" style="background-color: var(--color-primary); color: var(--color-background);">-20%</span>
 										</div>
-										<h3 class="fw-bold mb-0" style="color: var(--color-navy);">
-											$17.900<span class="fs-6 text-secondary">/mes</span>
+
+										<h3 class="fw-bold mb-0" id="precioBasico" data-mensual="15000" data-anual="180000"
+											style="color: var(--color-navy);">
+											$15.000<span class="fs-6 text-secondary" id="periodoBasico">/mes</span>
 										</h3>
-										<p class="mb-0" style="font-size: 0.7rem; color: var(--color-dark); opacity: 0.6;">
-											Beneficio exclusivo por tiempo limitado
+
+										<p class="mb-0 nota-mensual" style="font-size: 0.7rem; color: var(--color-dark); opacity: 0.6;">
+											Pagando anual, ahorrás un 20%
 										</p>
 									</div>
 
 									<ul class="list-unstyled mb-4 flex-grow-1">
-										<li class="d-flex align-items-center gap-2 mb-2"><span class="check-icono">✓</span>Carga y gestión
-											de propiedades</li>
-										<li class="d-flex align-items-center gap-2 mb-2"><span class="check-icono">✓</span>Gestión de
-											alquileres</li>
-										<li class="d-flex align-items-center gap-2 mb-2"><span class="check-icono">✓</span>Registro de pagos
+										<li class="d-flex align-items-center gap-2 mb-2">
+											<span class="check-icono" style="background-color: var(--color-accent); color: var(--color-navy);">✓</span>
+											Carga y gestión de propiedades
 										</li>
-										<li class="d-flex align-items-center gap-2 mb-2"><span class="check-icono">✓</span>Dashboard</li>
+										<li class="d-flex align-items-center gap-2 mb-2">
+											<span class="check-icono" style="background-color: var(--color-accent); color: var(--color-navy);">✓</span>
+											Gestión de alquileres
+										</li>
+										<li class="d-flex align-items-center gap-2 mb-2">
+											<span class="check-icono" style="background-color: var(--color-accent); color: var(--color-navy);">✓</span>
+											Registro de pagos
+										</li>
+										<li class="d-flex align-items-center gap-2 mb-2">
+											<span class="check-icono" style="background-color: var(--color-accent); color: var(--color-navy);">✓</span>
+											Dashboard
+										</li>
 									</ul>
 
 									<a href="#registro" class="btn btn-outline-alquidar-light rounded-pill fw-semibold">
@@ -697,7 +718,7 @@
 
 						<!-- PLAN PROFESIONAL -->
 						<div class="col-12 col-md-6 col-lg-4">
-							<div class="card card-precio card-destacada h-100 border-0 rounded-4 p-4 position-relative"
+							<div class="card card-precio h-100 border-0 rounded-4 p-4 shadow-lg position-relative"
 								style="background-color: var(--color-navy);">
 								<span class="badge rounded-pill px-3 py-2 position-absolute top-0 start-50 translate-middle"
 									style="background-color: var(--color-primary); color: var(--color-background); z-index: 2;">
@@ -707,8 +728,7 @@
 
 									<div class="d-flex align-items-center gap-2 mb-1">
 										<i class="bi bi-building-fill fs-3" style="color: var(--color-primary);"></i>
-										<h5 class="fw-bold mb-0" style="color: var(--color-background);">Profesional
-										</h5>
+										<h5 class="fw-bold mb-0" style="color: var(--color-background);">Profesional</h5>
 									</div>
 									<p class="text-uppercase small fw-semibold mb-3"
 										style="color: var(--color-accent); letter-spacing: .05em;">
@@ -718,32 +738,45 @@
 										Mas herramientas para una gestión completa y eficiente.
 									</p>
 
-									<div class="precio-caja precio-caja-oscura rounded-3 p-3 mb-4">
-										<p class="mb-1 small" style="color: var(--color-accent);">Hasta 15 alquileres
-										</p>
-										<div class="d-flex align-items-center gap-2 mb-1">
-											<span class="precio-anterior">$37.375</span>
-											<span class="badge-descuento">-20%</span>
+									<div class="precio-caja bg-white bg-opacity-10 rounded-3 p-3 mb-4">
+										<p class="mb-1 small" style="color: var(--color-accent);">Hasta 15 alquileres</p>
+
+										<div class="d-flex align-items-center gap-2 mb-1 d-none promo-anual">
+											<span class="precio-anterior text-decoration-line-through opacity-50" style="color: var(--color-accent);">$0</span>
+											<span class="badge rounded-pill" style="background-color: var(--color-primary); color: var(--color-background);">-20%</span>
 										</div>
-										<h3 class="fw-bold mb-0" style="color: var(--color-background);">
-											$29.900<span class="fs-6" style="color: var(--color-accent);">/mes</span>
+
+										<h3 class="fw-bold mb-0" id="precioProfesional" data-mensual="25000" data-anual="300000"
+											style="color: var(--color-background);">
+											$25.000<span class="fs-6" id="periodoProfesional" style="color: var(--color-accent);">/mes</span>
 										</h3>
-										<p class="mb-0" style="font-size: 0.7rem; color: var(--color-accent); opacity: 0.6;">
-											Beneficio exclusivo por tiempo limitado
+
+										<p class="mb-0 nota-mensual" style="font-size: 0.7rem; color: var(--color-accent); opacity: 0.6;">
+											Pagando anual, ahorrás un 20%
 										</p>
 									</div>
 
 									<ul class="list-unstyled mb-4 flex-grow-1">
-										<li class="d-flex align-items-center gap-2 mb-2" style="color: var(--color-background);"><span
-												class="check-icono">✓</span>Mayor cantidad de propiedades</li>
-										<li class="d-flex align-items-center gap-2 mb-2" style="color: var(--color-background);"><span
-												class="check-icono">✓</span>Gestión de contratos</li>
-										<li class="d-flex align-items-center gap-2 mb-2" style="color: var(--color-background);"><span
-												class="check-icono">✓</span>Registro de pagos</li>
-										<li class="d-flex align-items-center gap-2 mb-2" style="color: var(--color-background);"><span
-												class="check-icono">✓</span>Seguimiento de vencimientos</li>
-										<li class="d-flex align-items-center gap-2 mb-2" style="color: var(--color-background);"><span
-												class="check-icono">✓</span>Notificaciones</li>
+										<li class="d-flex align-items-center gap-2 mb-2" style="color: var(--color-background);">
+											<span class="check-icono" style="background-color: var(--color-primary); color: var(--color-background);">✓</span>
+											Mayor cantidad de propiedades
+										</li>
+										<li class="d-flex align-items-center gap-2 mb-2" style="color: var(--color-background);">
+											<span class="check-icono" style="background-color: var(--color-primary); color: var(--color-background);">✓</span>
+											Gestión de contratos
+										</li>
+										<li class="d-flex align-items-center gap-2 mb-2" style="color: var(--color-background);">
+											<span class="check-icono" style="background-color: var(--color-primary); color: var(--color-background);">✓</span>
+											Registro de pagos
+										</li>
+										<li class="d-flex align-items-center gap-2 mb-2" style="color: var(--color-background);">
+											<span class="check-icono" style="background-color: var(--color-primary); color: var(--color-background);">✓</span>
+											Seguimiento de vencimientos
+										</li>
+										<li class="d-flex align-items-center gap-2 mb-2" style="color: var(--color-background);">
+											<span class="check-icono" style="background-color: var(--color-primary); color: var(--color-background);">✓</span>
+											Notificaciones
+										</li>
 									</ul>
 
 									<a href="#registro" class="btn btn-alquidar rounded-pill fw-semibold">
@@ -755,7 +788,7 @@
 
 						<!-- PLAN PREMIUM -->
 						<div class="col-12 col-md-6 col-lg-4">
-							<div class="card card-precio h-100 border-0 rounded-4 p-4"
+							<div class="card card-precio h-100 border-0 rounded-4 p-4 shadow-sm"
 								style="background-color: var(--color-background);">
 								<div class="card-body d-flex flex-column p-0">
 
@@ -774,28 +807,43 @@
 
 									<div class="precio-caja rounded-3 p-3 mb-4">
 										<p class="mb-1 small text-secondary">Alquileres ilimitados</p>
-										<div class="d-flex align-items-center gap-2 mb-1">
-											<span class="precio-anterior">$59.875</span>
-											<span class="badge-descuento">-20%</span>
+
+										<div class="d-flex align-items-center gap-2 mb-1 d-none promo-anual">
+											<span class="precio-anterior text-decoration-line-through opacity-50" style="color: var(--color-dark);">$0</span>
+											<span class="badge rounded-pill" style="background-color: var(--color-primary); color: var(--color-background);">-20%</span>
 										</div>
-										<h3 class="fw-bold mb-0" style="color: var(--color-navy);">
-											$47.900<span class="fs-6 text-secondary">/mes</span>
+
+										<h3 class="fw-bold mb-0" id="precioPremium" data-mensual="45000" data-anual="540000"
+											style="color: var(--color-navy);">
+											$45.000<span class="fs-6 text-secondary" id="periodoPremium">/mes</span>
 										</h3>
-										<p class="mb-0" style="font-size: 0.7rem; color: var(--color-dark); opacity: 0.6;">
-											Beneficio exclusivo por tiempo limitado
+
+										<p class="mb-0 nota-mensual" style="font-size: 0.7rem; color: var(--color-dark); opacity: 0.6;">
+											Pagando anual, ahorrás un 20%
 										</p>
 									</div>
 
 									<ul class="list-unstyled mb-4 flex-grow-1">
-										<li class="d-flex align-items-center gap-2 mb-2"><span class="check-icono">✓</span>Propiedades
-											ilimitadas</li>
-										<li class="d-flex align-items-center gap-2 mb-2"><span class="check-icono">✓</span>Gestión completa
+										<li class="d-flex align-items-center gap-2 mb-2">
+											<span class="check-icono" style="background-color: var(--color-accent); color: var(--color-navy);">✓</span>
+											Propiedades ilimitadas
 										</li>
-										<li class="d-flex align-items-center gap-2 mb-2"><span class="check-icono">✓</span>Reportes</li>
-										<li class="d-flex align-items-center gap-2 mb-2"><span class="check-icono">✓</span>Funcionalidades
-											avanzadas</li>
-										<li class="d-flex align-items-center gap-2 mb-2"><span class="check-icono">✓</span>Soporte
-											prioritario</li>
+										<li class="d-flex align-items-center gap-2 mb-2">
+											<span class="check-icono" style="background-color: var(--color-accent); color: var(--color-navy);">✓</span>
+											Gestión completa
+										</li>
+										<li class="d-flex align-items-center gap-2 mb-2">
+											<span class="check-icono" style="background-color: var(--color-accent); color: var(--color-navy);">✓</span>
+											Reportes
+										</li>
+										<li class="d-flex align-items-center gap-2 mb-2">
+											<span class="check-icono" style="background-color: var(--color-accent); color: var(--color-navy);">✓</span>
+											Funcionalidades avanzadas
+										</li>
+										<li class="d-flex align-items-center gap-2 mb-2">
+											<span class="check-icono" style="background-color: var(--color-accent); color: var(--color-navy);">✓</span>
+											Soporte prioritario
+										</li>
 									</ul>
 
 									<a href="#registro" class="btn btn-outline-alquidar-light rounded-pill fw-semibold">
@@ -808,6 +856,7 @@
 					</div>
 				</div>
 			</section>
+			
 
 			<section id="analisis">
 				<!-- Análisis y alertas -->
