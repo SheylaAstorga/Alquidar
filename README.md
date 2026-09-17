@@ -20,6 +20,7 @@ El proyecto surge con el objetivo de facilitar la gestión de los alquileres y m
 * CSS3
 * Git
 * GitHub
+* Javascript
 
 ##  Estado del proyecto
 
@@ -27,7 +28,11 @@ Actualmente el proyecto se encuentra en etapa de desarrollo.
 
 Durante el TP1 se realizó la estructura inicial del sitio utilizando HTML5 y HTML semántico.
 
-Durante el TP2 se trabajará en la transformación de esta estructura en una interfaz web completa mediante CSS, aplicando Flexbox, CSS Grid, variables CSS y Responsive Design.
+Durante el TP2 se trabajó en la transformación de esta estructura en una interfaz web completa mediante CSS, aplicando Flexbox, CSS Grid, variables CSS y Responsive Design.
+
+Durante el TP3 se trabajó en la trabajo con la integración del Framework Bootstrap en sustitución de codigo en el archivo Style.css
+
+Durante el TP4 se trabajó en brindarle interactividad a la página mediante la integración de Javascript a través de la manipulación del DOM.
 
 ##  Variables CSS
 
