@@ -221,3 +221,14 @@ formulario.addEventListener("submit", function(event) {
 }, 4000);
 });
 
+const botonEquipo = document.querySelector("#botonEquipo");
+const botonVolver = document.querySelector("#botonVolver");
+const footerFlip = document.querySelector(".footer-flip-inner");
+
+botonEquipo.addEventListener("click", function() {
+    footerFlip.classList.add("girado");
+});
+
+botonVolver.addEventListener("click", function() {
+    footerFlip.classList.remove("girado");
+});
